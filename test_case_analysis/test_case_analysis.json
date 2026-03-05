@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "generated_at": "2025-01-15T10:00:00Z",
+    "source": "Manual Test Case Analysis",
+    "total_test_cases": 16
+  },
+  "test_cases": [
+    {
+      "id": "TC-001",
+      "name": "Verify successful login with valid credentials",
+      "type": "functional",
+      "priority": "high",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "LoginPage",
+          "description": "Page object for login page interactions"
+        },
+        {
+          "type": "page_object",
+          "name": "DashboardPage",
+          "description": "Page object for dashboard page verification"
+        },
+        {
+          "type": "locator",
+          "name": "USERNAME_INPUT",
+          "description": "Username input field locator"
+        },
+        {
+          "type": "locator",
+          "name": "PASSWORD_INPUT",
+          "description": "Password input field locator"
+        },
+        {
+          "type": "locator",
+          "name": "LOGIN_BUTTON",
+          "description": "Login button locator"
+        },
+        {
+          "type": "function",
+          "name": "login",
+          "description": "Function to perform login with username and password"
+        },
+        {
+          "type": "function",
+          "name": "is_dashboard_loaded",
+          "description": "Check if dashboard page loaded successfully"
+        },
+        {
+          "type": "fixture",
+          "name": "admin_credentials",
+          "description": "Fixture providing admin credentials"
+        },
+        {
+          "type": "fixture",
+          "name": "clean_browser",
+          "description": "Fixture providing clean browser instance"
+        }
+      ]
+    },
+    {
+      "id": "TC-002",
+      "name": "Verify error message with invalid credentials",
+      "type": "functional",
+      "priority": "high",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "LoginPage",
+          "description": "Login page object"
+        },
+        {
+          "type": "function",
+          "name": "login",
+          "description": "Perform login"
+        },
+        {
+          "type": "function",
+          "name": "is_error_displayed",
+          "description": "Check if error message is visible"
+        },
+        {
+          "type": "function",
+          "name": "get_error_message",
+          "description": "Get error message text"
+        },
+        {
+          "type": "locator",
+          "name": "ERROR_MESSAGE",
+          "description": "Error message locator"
+        },
+        {
+          "type": "fixture",
+          "name": "invalid_credentials",
+          "description": "Invalid credentials fixture"
+        }
+      ]
+    },
+    {
+      "id": "TC-005",
+      "name": "Verify remember me functionality",
+      "type": "functional",
+      "priority": "medium",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "LoginPage",
+          "description": "Login page object"
+        },
+        {
+          "type": "function",
+          "name": "check_remember_me",
+          "description": "Check the remember me checkbox"
+        },
+        {
+          "type": "locator",
+          "name": "REMEMBER_ME_CHECKBOX",
+          "description": "Remember me checkbox locator"
+        },
+        {
+          "type": "function",
+          "name": "login",
+          "description": "Perform login"
+        }
+      ]
+    },
+    {
+      "id": "TC-009",
+      "name": "Verify dashboard loads after login",
+      "type": "functional",
+      "priority": "high",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "DashboardPage",
+          "description": "Dashboard page object"
+        },
+        {
+          "type": "function",
+          "name": "is_dashboard_loaded",
+          "description": "Check dashboard loaded"
+        },
+        {
+          "type": "locator",
+          "name": "WELCOME_BANNER",
+          "description": "Welcome banner locator"
+        },
+        {
+          "type": "function",
+          "name": "login",
+          "description": "Perform login first"
+        }
+      ]
+    },
+    {
+      "id": "TC-011",
+      "name": "Verify logout works",
+      "type": "functional",
+      "priority": "high",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "DashboardPage",
+          "description": "Dashboard page object"
+        },
+        {
+          "type": "function",
+          "name": "click_logout",
+          "description": "Click logout button"
+        },
+        {
+          "type": "locator",
+          "name": "LOGOUT_BUTTON",
+          "description": "Logout button locator"
+        }
+      ]
+    },
+    {
+      "id": "TC-013",
+      "name": "Verify global search works",
+      "type": "functional",
+      "priority": "medium",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "DashboardPage",
+          "description": "Dashboard page object"
+        },
+        {
+          "type": "function",
+          "name": "search_global",
+          "description": "Perform global search"
+        },
+        {
+          "type": "locator",
+          "name": "SEARCH_INPUT",
+          "description": "Search input locator"
+        },
+        {
+          "type": "locator",
+          "name": "SEARCH_BUTTON",
+          "description": "Search button locator"
+        }
+      ]
+    },
+    {
+      "id": "TC-017",
+      "name": "Verify user can update profile name",
+      "type": "functional",
+      "priority": "medium",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "ProfilePage",
+          "description": "Profile page object"
+        },
+        {
+          "type": "function",
+          "name": "update_name",
+          "description": "Update profile name"
+        },
+        {
+          "type": "function",
+          "name": "save_profile",
+          "description": "Save profile changes"
+        },
+        {
+          "type": "function",
+          "name": "is_success_shown",
+          "description": "Check success toast"
+        },
+        {
+          "type": "locator",
+          "name": "NAME_INPUT",
+          "description": "Name input locator"
+        },
+        {
+          "type": "locator",
+          "name": "SAVE_BUTTON",
+          "description": "Save button locator"
+        },
+        {
+          "type": "utility",
+          "name": "random_name",
+          "description": "Generate random name for testing"
+        }
+      ]
+    },
+    {
+      "id": "TC-018",
+      "name": "Verify payment processing",
+      "type": "functional",
+      "priority": "critical",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "PaymentPage",
+          "description": "Payment page object - DOES NOT EXIST"
+        },
+        {
+          "type": "function",
+          "name": "enter_card_details",
+          "description": "Enter credit card info - DOES NOT EXIST"
+        },
+        {
+          "type": "function",
+          "name": "submit_payment",
+          "description": "Submit payment - DOES NOT EXIST"
+        },
+        {
+          "type": "locator",
+          "name": "CARD_NUMBER_INPUT",
+          "description": "Card number field - DOES NOT EXIST"
+        },
+        {
+          "type": "locator",
+          "name": "PAY_BUTTON",
+          "description": "Pay button - DOES NOT EXIST"
+        },
+        {
+          "type": "utility",
+          "name": "generate_test_card",
+          "description": "Generate test card number - DOES NOT EXIST"
+        }
+      ]
+    },
+    {
+      "id": "TC-019",
+      "name": "Verify email notification settings",
+      "type": "functional",
+      "priority": "low",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "NotificationSettingsPage",
+          "description": "Notification settings page - DOES NOT EXIST"
+        },
+        {
+          "type": "function",
+          "name": "toggle_email_notifications",
+          "description": "Toggle email notifications - DOES NOT EXIST"
+        },
+        {
+          "type": "locator",
+          "name": "EMAIL_TOGGLE",
+          "description": "Email toggle switch - DOES NOT EXIST"
+        }
+      ]
+    },
+    {
+      "id": "TC-020",
+      "name": "Verify data export functionality",
+      "type": "functional",
+      "priority": "medium",
+      "required_components": [
+        {
+          "type": "page_object",
+          "name": "ExportPage",
+          "description": "Export page - DOES NOT EXIST"
+        },
+        {
+          "type": "function",
+          "name": "export_to_csv",
+          "description": "Export data to CSV - DOES NOT EXIST"
+        },
+        {
+          "type": "function",
+          "name": "wait_for_download",
+          "description": "Wait for file download - DOES NOT EXIST"
+        },
+        {
+          "type": "utility",
+          "name": "verify_csv_content",
+          "description": "Verify CSV file content - DOES NOT EXIST"
+        },
+        {
+          "type": "locator",
+          "name": "EXPORT_BUTTON",
+          "description": "Export button - DOES NOT EXIST"
+        },
+        {
+          "type": "locator",
+          "name": "FORMAT_DROPDOWN",
+          "description": "Format dropdown - DOES NOT EXIST"
+        }
+      ]
+    }
+  ]
+}
