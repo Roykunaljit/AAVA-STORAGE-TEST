@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "generated_at": "2026-03-05T13:30:08.440100Z",
+    "batches_merged": 1,
+    "source": "MergeMappedReportsTool"
+  },
+  "summary": {
+    "total_reusable": 4,
+    "total_to_create": 0,
+    "batch_summaries": [
+      {
+        "batch_id": 1,
+        "found": 4,
+        "missing": 0
+      }
+    ],
+    "failed_reads": []
+  },
+  "reusable_components": {
+    "description": "EXIST in codebase. Can be reused.",
+    "items": [
+      {
+        "type": "class",
+        "name": "BasePage",
+        "description": "Base page object found in codebase",
+        "found_in_files": [
+          "src/base/base_page.py"
+        ],
+        "used_by_test_cases": [
+          "TC-001",
+          "TC-002",
+          "TC-005",
+          "TC-009"
+        ],
+        "src_batch": 1,
+        "found_in_batches": [
+          1
+        ]
+      },
+      {
+        "type": "function",
+        "name": "is_element_visible",
+        "description": "Check element visibility",
+        "found_in_files": [
+          "src/base/base_page.py"
+        ],
+        "used_by_test_cases": [
+          "TC-001",
+          "TC-008"
+        ],
+        "src_batch": 1,
+        "found_in_batches": [
+          1
+        ]
+      },
+      {
+        "type": "function",
+        "name": "click",
+        "description": "Click on element",
+        "found_in_files": [
+          "src/base/base_page.py"
+        ],
+        "used_by_test_cases": [
+          "TC-001",
+          "TC-005",
+          "TC-011"
+        ],
+        "src_batch": 1,
+        "found_in_batches": [
+          1
+        ]
+      },
+      {
+        "type": "function",
+        "name": "type_text",
+        "description": "Type text into field",
+        "found_in_files": [
+          "src/base/base_page.py"
+        ],
+        "used_by_test_cases": [
+          "TC-001",
+          "TC-002",
+          "TC-017"
+        ],
+        "src_batch": 1,
+        "found_in_batches": [
+          1
+        ]
+      }
+    ]
+  },
+  "components_to_create": {
+    "description": "NOT in codebase. Must be created.",
+    "items": []
+  }
+}
