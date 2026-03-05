@@ -1,0 +1,21 @@
+environment: staging
+base_url: https://staging.example.com
+timeout: 30
+retry_count: 3
+browser: chrome
+headless: false
+screenshot_on_failure: true
+log_level: INFO
+
+credentials:
+  admin:
+    username: admin@example.com
+    password: admin123
+  standard:
+    username: user@example.com
+    password: user123
+
+database:
+  host: localhost
+  port: 5432
+  name: aura_test_db
