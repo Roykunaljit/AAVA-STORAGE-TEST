@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "created_at": "2026-03-05T13:14:27.509614Z",
+    "total_mapping_batches": 1,
+    "overall_status": "in_progress"
+  },
+  "batches": [
+    {
+      "batch_id": 1,
+      "batch_report_path": "codebase_batches/batch_1_report.json",
+      "status": "pending",
+      "mapped_report_path": null,
+      "completed_at": null
+    }
+  ]
+}
